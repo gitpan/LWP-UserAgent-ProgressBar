@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Term::ProgressBar;
 use base 'LWP::UserAgent';
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub post_with_progress {
     my ($self, $url, $form, %args) = @_;

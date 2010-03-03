@@ -10,7 +10,7 @@ auto_set_repository;
 requires 'LWP::UserAgent';
 requires 'Term::ProgressBar';
 test_requires 'Test::Differences';
-test_requires 'Test::More' => '0.70';
+test_requires 'Test::More' => '0.88';
 extra_tests;
 author_requires 'ShipIt';
 author_requires 'ShipIt::Step::DistClean';

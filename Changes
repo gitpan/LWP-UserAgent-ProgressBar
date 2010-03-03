@@ -1,5 +1,9 @@
 Revision history for Perl extension LWP-UserAgent-ProgressBar
 
+0.05  Thu 2010.03.04 00:15:24 CET (Marcel Gruenauer <marcel@cpan.org>)
+     - require Test::More 0.88 for done_testing() in t/00_versions.t
+     - refactor test code (thanks tokuhirom)
+
 0.04  Wed 2010.02.10 11:52:23 CET (Marcel Gruenauer <marcel@cpan.org>)
      - add post_with_progress method for POST request. (Ktat <ktat at cpan.org>)
      - updated skeleton
