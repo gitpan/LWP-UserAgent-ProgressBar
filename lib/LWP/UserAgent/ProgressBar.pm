@@ -1,10 +1,12 @@
-package LWP::UserAgent::ProgressBar;
-use 5.006;
+use 5.008;
 use strict;
 use warnings;
+
+package LWP::UserAgent::ProgressBar;
+our $VERSION = '1.100810';
+# ABSTRACT: An LWP user agent that can display a progress bar
 use Term::ProgressBar;
 use base 'LWP::UserAgent';
-our $VERSION = '0.05';
 
 sub post_with_progress {
     my ($self, $url, $form, %args) = @_;
@@ -62,13 +64,20 @@ sub _request_with_progress {
     $response;
 }
 1;
-__END__
 
-=for stopwords Ktat
+
+__END__
+=pod
 
 =head1 NAME
 
 LWP::UserAgent::ProgressBar - An LWP user agent that can display a progress bar
+
+=head1 VERSION
+
+version 1.100810
+
+=for stopwords Ktat
 
 =head1 SYNOPSIS
 
@@ -84,50 +93,51 @@ method, described below.
 
 =head1 METHODS
 
-=over 4
-
-=item C<get_with_progress>
+=head2 get_with_progress
 
 Takes the same arguments as L<LWP::UserAgent>'s C<get()>, but overrides the
 C<:content_cb> and C<:read_size_hint> arguments. During download, a progress
 bar is displayed.
 
-=item C<post_with_progress>
+=head2 post_with_progress
 
 Takes the same arguments as L<LWP::UserAgent>'s C<post()>, but overrides the
 C<:content_cb> and C<:read_size_hint> arguments. During download, a progress
 bar is displayed.
 
-=back
+=head1 INSTALLATION
+
+See perlmodinstall for information and options on installing Perl modules.
 
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org>.
-
-=head1 INSTALLATION
-
-See perlmodinstall for information and options on installing Perl modules.
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=LWP-UserAgent-ProgressBar>.
 
 =head1 AVAILABILITY
 
 The latest version of this module is available from the Comprehensive Perl
-Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
-site near you. Or see L<http://search.cpan.org/dist/LWP-UserAgent-ProgressBar/>.
+Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
+site near you, or see
+L<http://search.cpan.org/dist/LWP-UserAgent-ProgressBar/>.
 
-=head1 AUTHORS
+The development version lives at
+L<http://github.com/hanekomu/LWP-UserAgent-ProgressBar/>.
+Instead of sending patches, please fork this project using the standard git
+and github infrastructure.
 
-Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
-Ktat C<< ktat at cpan.org >>
+=head1 AUTHOR
+
+  Marcel Gruenauer <marcel@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007-2009 by the authors.
+This software is copyright (c) 2007 by Marcel Gruenauer.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

@@ -1,9 +1,10 @@
+
 This is the Perl distribution LWP-UserAgent-ProgressBar.
 
 ## Installation
 
-LWP-UserAgent-ProgressBar installation is straightforward. If your CPAN shell
-is set up, you should just be able to do
+LWP-UserAgent-ProgressBar installation is straightforward.
+If your CPAN shell is set up, you should just be able to do
 
     % cpan LWP::UserAgent::ProgressBar
 
@@ -18,10 +19,9 @@ Then install it:
 
 ## Documentation
 
-LWP-UserAgent-ProgressBar documentation is available as in POD. So you can do:
+LWP-UserAgent-ProgressBar documentation is available as in POD.
+So you can do:
 
     % perldoc LWP::UserAgent::ProgressBar
 
-to read the documentation online with your favorite pager.
-
-Marcel Gruenauer
+to read the documentation with your favorite pager.
